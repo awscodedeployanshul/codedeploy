@@ -3,3 +3,5 @@ os: linux
 files:
   - source: /opt/code.txt
     destination: /usr/share/nginx/html
+ AfterInstall:
+   - service nginx restart
