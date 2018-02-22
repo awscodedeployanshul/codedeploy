@@ -1,7 +1,9 @@
-version: 0.0
-os: linux
-files:
-  - source: /opt/code.txt
+--- 
+AfterInstall: 
+  - "service nginx restart"
+files: 
+  - 
     destination: /usr/share/nginx/html
- AfterInstall:
-   - service nginx restart
+    source: /opt/code.txt
+os: linux
+version: 0.0
